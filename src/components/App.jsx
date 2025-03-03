@@ -1,16 +1,17 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component } from "react";
+import { StickerList } from "./Sticker/Sticker";
+import data from "../stickers.json"
+
+export class App extends Component{
+state ={
+  label:"",
+}
+
+
+render(){
+  return(
+    <>
+    <StickerList data={data} />
+    </>
+  )
+}};
